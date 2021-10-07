@@ -8,7 +8,7 @@ import { Link, useHistory, withRouter } from 'react-router-dom'
 const TopNavbar = ({ history }) => {
 
     return (
-        <Navbar bg="dark" variant="dark" /* className="sticky-top" */>
+        <Navbar bg="dark" variant="dark" className="sticky-top">
             <Navbar.Brand href="#home">Strive-books</Navbar.Brand>
             <Nav className="mr-auto">
                 <Link to="/" className="no-underline">

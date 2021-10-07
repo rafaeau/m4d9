@@ -1,4 +1,4 @@
-import {Form, Button, Container, Row, Col} from "react-bootstrap";
+import {Form, Button, Container, Row, Col, Badge} from "react-bootstrap";
 import {Component} from "react"
 
 class Registration extends Component {
@@ -46,13 +46,15 @@ class Registration extends Component {
     return (
       <div className="align-items-center d-flex">
         {this.state.showComplete ? (
-          <>
+          <Container>
+            <Row className="mb-2">
             <h1>Registration done successfully!</h1>
-            <h4>Details:</h4>
+            </Row>
+            <h4>DETAILS:</h4>
             <p>{this.state.registration.name}</p>
             <p>{this.state.registration.surname}</p>
             <p>{this.state.registration.email}</p>
-          </>
+          </Container>
         ) : (
           <Container md={8}>
               <Row>
