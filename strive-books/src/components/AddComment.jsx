@@ -47,7 +47,7 @@ class AddComment extends Component {
 
     render() {
         return (
-            <div>
+            <div className="mt-3">
                 <Form onSubmit={this.sendComment}>
                     <Form.Group>
                         <Form.Label>Comment text</Form.Label>

@@ -1,5 +1,4 @@
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import {Form, Button, Container, Row, Col} from "react-bootstrap";
 import {Component} from "react"
 
 class Registration extends Component {
@@ -55,11 +54,13 @@ class Registration extends Component {
             <p>{this.state.registration.email}</p>
           </>
         ) : (
-          <>
-            <h1>Registration form</h1>
+          <Container md={8}>
+              <Row>
+            <h3 className="mb-3">REGISTRATION FORM</h3>
+            </Row>
             <Form onSubmit={this.handleRegistration}>
               <Form.Group>
-                <Form.Label>Name</Form.Label>
+                <Form.Label>Name:</Form.Label>
                 <Form.Control
                   type="text"
                   required
@@ -68,7 +69,7 @@ class Registration extends Component {
                 />
               </Form.Group>
               <Form.Group>
-                <Form.Label>Surname</Form.Label>
+                <Form.Label>Surname:</Form.Label>
                 <Form.Control
                   type="text"
                   required
@@ -77,7 +78,7 @@ class Registration extends Component {
                 />
               </Form.Group>
               <Form.Group>
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email:</Form.Label>
                 <Form.Control
                   type="email"
                   required
@@ -86,7 +87,7 @@ class Registration extends Component {
                 />
               </Form.Group>
               <Form.Group>
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Password:</Form.Label>
                 <Form.Control
                   type="password"
                   required
@@ -95,7 +96,7 @@ class Registration extends Component {
                 />
               </Form.Group>
               <Form.Group>
-                <Form.Label>Confirm Password</Form.Label>
+                <Form.Label>Confirm Password:</Form.Label>
                 <Form.Control
                   type="password"
                   required
@@ -106,10 +107,10 @@ class Registration extends Component {
                 />
               </Form.Group>
               <Button type="submit" disabled={!this.formIsValidated()}>
-                Register
+                Send
               </Button>
             </Form>
-          </>
+          </Container>
         )}
       </div>
     );
