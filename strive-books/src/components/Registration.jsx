@@ -1,6 +1,6 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Component from "react"
+import {Component} from "react"
 
 class Registration extends Component {
   state = {
